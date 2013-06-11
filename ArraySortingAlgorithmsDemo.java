@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 @SuppressWarnings({"unchecked"})
 public class ArraySortingAlgorithmsDemo {
-  private static int maxSizeOfArray = 5;
+  private static int arraySize = 10;
 
   public static void main (String[] args) {
     int i = 0;
@@ -21,20 +21,29 @@ public class ArraySortingAlgorithmsDemo {
 
     ArraySortingAlgorithms ASA = new ArraySortingAlgorithms();
 
-    // Node<Integer, String> newNode = new Node<Integer, String>(1, "Kason");
-
-    // System.out.println(newNode.getIData());
-    // System.out.println(newNode.getSData());
-
-    // Node<Integer, String>[] nodeArray = new Node[maxSizeOfArray];
-    Node<Integer, String>[] nodeArray = new Node[maxSizeOfArray];
+    Node<Integer, String>[] nodeArray = new Node[arraySize];
     
-    for (i = 0; i < maxSizeOfArray; i++) {
-      // System.out.println(i + ": " + nodeArray[i]);
-      nodeArray[i] = new Node<Integer, String>();
-      System.out.println(i + ": " + nodeArray[i].getIData());      
-      System.out.println(i + ": " + nodeArray[i].getSData());      
+    for (i = 0; i < arraySize; i++) {
+      nodeArray[i] = new Node<Integer, String>(i + 1, "");
+      nodeArray[i].setIData(random.nextInt(maxNum));      
+      System.out.print(nodeArray[i].getIData() + " ");      
     }
+    System.out.println();
+
+    ASA.BubbleSort(nodeArray, arraySize, "descend");
+
+    for (i = 0; i < arraySize; i++) {
+      System.out.print(nodeArray[i].getIData() + " ");      
+    }
+    System.out.println();
+
+    ASA.BubbleSort(nodeArray, arraySize, "ascend");
+
+    for (i = 0; i < arraySize; i++) {
+      System.out.print(nodeArray[i].getIData() + " ");      
+    }
+    System.out.println();
+
 
     System.exit(0);    
   }

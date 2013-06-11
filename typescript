@@ -1,0 +1,20 @@
+Script started on Tue 11 Jun 2013 01:35:41 PM CDT
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/ArraySortingAlgorithmska-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/ArraySortingAlgorithms$ make clean ASA
+rm -f *.class	
+javac Node.java ArraySortingAlgorithms.java ArraySortingAlgorithmsDemo.java
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/ArraySortingAlgorithmska-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/ArraySortingAlgorithms$ java ArraySortingAlgorithmsDemo
+6 5 7 1 1 7 9 9 1 3 
+9 9 7 7 6 5 3 1 1 1 
+1 1 1 3 5 6 7 7 9 9 
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/ArraySortingAlgorithmska-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/ArraySortingAlgorithms$ java ArraySortingAlgorithmsDemo
+8 9 9 8 4 6 0 2 5 6 
+9 9 8 8 6 6 5 4 2 0 
+0 2 4 5 6 6 8 8 9 9 
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/ArraySortingAlgorithmska-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/ArraySortingAlgorithms$ java ArraySortingAlgorithmsDemo
+8 6 9 2 1 3 9 4 6 2 
+9 9 8 6 6 4 3 2 2 1 
+1 2 2 3 4 6 6 8 9 9 
+]0;ka-son@kason-Lenovo-IdeaPad-S300: ~/Documents/Java/ArraySortingAlgorithmska-son@kason-Lenovo-IdeaPad-S300:~/Documents/Java/ArraySortingAlgorithms$ exit
+exit
+
+Script done on Tue 11 Jun 2013 01:36:04 PM CDT
