@@ -29,16 +29,12 @@ public class Node<I, S> {
     sData = newSData;
   }
 
-  public Node getNode() {
-    return this;
-  }
-
   public I getIData() {
-    return iData;
+    return this.iData;
   }
 
   public S getSData() {
-    return sData;
+    return this.sData;
   }
 
 }

@@ -31,9 +31,9 @@ public class ArraySortingAlgorithmsDemo {
     
     for (i = 0; i < maxSizeOfArray; i++) {
       // System.out.println(i + ": " + nodeArray[i]);
-      nodeArray[i] = new Node<Integer, String>(i, "a");
-      System.out.println(i + ": " + nodeArray[i].getNode().getIData());      
-      System.out.println(i + ": " + nodeArray[i].getNode().getSData());      
+      nodeArray[i] = new Node<Integer, String>();
+      System.out.println(i + ": " + nodeArray[i].getIData());      
+      System.out.println(i + ": " + nodeArray[i].getSData());      
     }
 
     System.exit(0);    
