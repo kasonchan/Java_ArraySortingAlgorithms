@@ -1,5 +1,5 @@
 /**
- * File: ArraySortingAlgorithmDemo.java
+ * File: ArraySortingAlgorithmsDemo.java
  * Status: Not Completed
  * Created Date: June 04, 2013
  * Last Modified Date: June 10, 2013
@@ -10,38 +10,31 @@
 import java.util.Random;
 import java.util.Arrays;
 
-public class ArraySortingAlgorithmDemo {
-  public static int maxSizeOfArray = 10;
-  
+@SuppressWarnings({"unchecked"})
+public class ArraySortingAlgorithmsDemo {
+  private static int maxSizeOfArray = 5;
+
   public static void main (String[] args) {
     int i = 0;
     int maxNum = 10;
-    int[] iArray = new int[maxNum];
     Random random = new Random();
 
-    ArraySortingAlgorithm ASA = new ArraySortingAlgorithm();
+    ArraySortingAlgorithms ASA = new ArraySortingAlgorithms();
 
-    for (i = 0; i < maxSizeOfArray; i++) {
-      iArray[i] =  random.nextInt(maxNum);
-    }
+    // Node<Integer, String> newNode = new Node<Integer, String>(1, "Kason");
 
-    for (i = 0; i < maxSizeOfArray; i++) {
-      System.out.print(iArray[i]);
-      System.out.print(" ");
-    }
+    // System.out.println(newNode.getIData());
+    // System.out.println(newNode.getSData());
 
-    System.out.println();
+    // Node<Integer, String>[] nodeArray = new Node[maxSizeOfArray];
+    Node<Integer, String>[] nodeArray = new Node[maxSizeOfArray];
     
-    // ASA.swap(iArray[0], iArray[1]);
-    Arrays.sort(iArray);
-
-
     for (i = 0; i < maxSizeOfArray; i++) {
-      System.out.print(iArray[i]);
-      System.out.print(" ");
+      // System.out.println(i + ": " + nodeArray[i]);
+      nodeArray[i] = new Node<Integer, String>(i, "a");
+      System.out.println(i + ": " + nodeArray[i].getNode().getIData());      
+      System.out.println(i + ": " + nodeArray[i].getNode().getSData());      
     }
-
-    System.out.println();
 
     System.exit(0);    
   }

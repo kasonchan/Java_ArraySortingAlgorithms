@@ -7,8 +7,38 @@
  * Description:
  */ 
 
-public Node<I, S> {
+public class Node<I, S> {
   private I iData;
   private S sData;
-  
+
+  public Node() {
+    iData = null;
+    sData = null;    
+  }
+
+  public Node(final I newIData, final S newSData) {
+    iData = newIData;
+    sData = newSData;
+  }
+
+  public void setIData(final I newIData) {
+    iData = newIData;
+  }
+
+  public void setSData(final S newSData) {
+    sData = newSData;
+  }
+
+  public Node getNode() {
+    return this;
+  }
+
+  public I getIData() {
+    return iData;
+  }
+
+  public S getSData() {
+    return sData;
+  }
+
 }

@@ -1,8 +1,5 @@
 ASA:
-	javac ArraySortingAlgorithms.java
-
-ASADemo:
-	javac ArraySortingAlgorithmDemos.java
+	javac Node.java ArraySortingAlgorithms.java ArraySortingAlgorithmsDemo.java
 
 clean:
 	rm -f *.class	
