@@ -24,26 +24,40 @@ public class ArraySortingAlgorithmsDemo {
     Node<Integer, String>[] nodeArray = new Node[arraySize];
     
     for (i = 0; i < arraySize; i++) {
-      nodeArray[i] = new Node<Integer, String>(i + 1, "");
-      nodeArray[i].setIData(random.nextInt(maxNum));      
-      System.out.print(nodeArray[i].getIData() + " ");      
+      nodeArray[i] = new Node<Integer, String>();
+      nodeArray[i].setIData(random.nextInt(maxNum)); // Generate random integer
+      nodeArray[i].setSData((String)(random.nextInt(26) + "a")); // Generate random string            
+      System.out.print("(" + nodeArray[i].getIData() + ", " + nodeArray[i].getSData() + ")");      
     }
     System.out.println();
 
-    ASA.BubbleSort(nodeArray, arraySize, "descend");
+    ASA.BubbleSort(nodeArray, arraySize, "ascend", "iData");
 
     for (i = 0; i < arraySize; i++) {
-      System.out.print(nodeArray[i].getIData() + " ");      
+      System.out.print("(" + nodeArray[i].getIData() + ", " + nodeArray[i].getSData() + ")");      
     }
     System.out.println();
 
-    ASA.BubbleSort(nodeArray, arraySize, "ascend");
+    ASA.BubbleSort(nodeArray, arraySize, "descend", "iData");
 
     for (i = 0; i < arraySize; i++) {
-      System.out.print(nodeArray[i].getIData() + " ");      
+      System.out.print("(" + nodeArray[i].getIData() + ", " + nodeArray[i].getSData() + ")");      
     }
     System.out.println();
 
+    ASA.BubbleSort(nodeArray, arraySize, "ascend", "sData");
+
+    for (i = 0; i < arraySize; i++) {
+      System.out.print("(" + nodeArray[i].getIData() + ", " + nodeArray[i].getSData() + ")");      
+    }
+    System.out.println();
+
+    ASA.BubbleSort(nodeArray, arraySize, "descend", "sData");
+
+    for (i = 0; i < arraySize; i++) {
+      System.out.print("(" + nodeArray[i].getIData() + ", " + nodeArray[i].getSData() + ")");      
+    }
+    System.out.println();
 
     System.exit(0);    
   }

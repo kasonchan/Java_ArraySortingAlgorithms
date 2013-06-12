@@ -15,30 +15,59 @@ public class ArraySortingAlgorithms {
   }
 
   public void Swap(Node<Integer, String>[] nodeArray, int pos1, int pos2) {
-    int temp = nodeArray[pos1].getIData();
+    Node<Integer, String> tempNode = nodeArray[pos1].getNode();
 
-    nodeArray[pos1].setIData(nodeArray[pos2].getIData());
-    nodeArray[pos2].setIData(temp);
+    nodeArray[pos1] = nodeArray[pos2];
+    nodeArray[pos2] = tempNode;
   }
 
-  public void BubbleSort(Node<Integer, String>[] nodeArray, int arraySize, String order) {
+  public void BubbleSort(Node<Integer, String>[] nodeArray, int arraySize, String order, String data) {
+    /**
+     * Sorts in ascending order
+     */
     if (order.equalsIgnoreCase("ascend")) {
-      for (int i = 0; i < arraySize - 1; i++) {
-        for (int j = 0; j < arraySize - i - 1; j++) {
-          if (nodeArray[j].getIData() > nodeArray[j + 1].getIData()) {
-            Swap(nodeArray, j, j + 1);
-          }
-        }      
+      if (data.equalsIgnoreCase("iData")) {
+        for (int i = 0; i < arraySize - 1; i++) {
+          for (int j = 0; j < arraySize - i - 1; j++) {
+            if (nodeArray[j].getIData() > nodeArray[j + 1].getIData()) {
+              Swap(nodeArray, j, j + 1);
+            }
+          }      
+        }        
       }
+      else if (data.equalsIgnoreCase("sData")) {
+        for (int i = 0; i < arraySize - 1; i++) {
+          for (int j = 0; j < arraySize - i - 1; j++) {
+            if (nodeArray[j].getSData().compareToIgnoreCase(nodeArray[j + 1].getSData()) > 0) {
+              Swap(nodeArray, j, j + 1);
+            }
+          }      
+        }                
+      }    
     }
+
+    /**
+     * Sorts in descending order
+     */
     else if (order.equalsIgnoreCase("descend")) {
-      for (int i = 0; i < arraySize - 1; i++) {
-        for (int j = 0; j < arraySize - i - 1; j++) {
-          if (nodeArray[j].getIData() < nodeArray[j + 1].getIData()) {
-            Swap(nodeArray, j, j + 1);
-          }
-        }      
+      if (data.equalsIgnoreCase("iData")) {
+        for (int i = 0; i < arraySize - 1; i++) {
+          for (int j = 0; j < arraySize - i - 1; j++) {
+            if (nodeArray[j].getIData() < nodeArray[j + 1].getIData()) {
+              Swap(nodeArray, j, j + 1);
+            }
+          }      
+        }        
       }
+      else if (data.equalsIgnoreCase("sData")) {
+        for (int i = 0; i < arraySize - 1; i++) {
+          for (int j = 0; j < arraySize - i - 1; j++) {
+            if (nodeArray[j].getSData().compareToIgnoreCase(nodeArray[j + 1].getSData()) < 0) {
+              Swap(nodeArray, j, j + 1);
+            }
+          }      
+        }                
+      }    
     }
   }
 }

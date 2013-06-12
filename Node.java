@@ -29,6 +29,10 @@ public class Node<I, S> {
     sData = newSData;
   }
 
+  public Node<I, S> getNode() {
+    return this;
+  }
+
   public I getIData() {
     return this.iData;
   }
